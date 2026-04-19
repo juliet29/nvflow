@@ -1,0 +1,37 @@
+Assuming unrestricted shared filesystem usage.
+host: DN525ffg.SUNet
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+consolidate               1
+consolidate_target        1
+total                     2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Apr 19 15:18:48 2026]
+localrule consolidate:
+    output: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    log: static/4_temp/test/smk/shared/flowmetrics/log.out
+    jobid: 1
+    reason: Missing output files: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    resources: tmpdir=/var/folders/7r/39t1cgb13d57zk26c__2z50m0000gn/T
+[Sun Apr 19 15:18:50 2026]
+Finished jobid: 1 (Rule: consolidate)
+1 of 2 steps (50%) done
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Apr 19 15:18:51 2026]
+localrule consolidate_target:
+    input: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    jobid: 0
+    reason: Input files updated by another job: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    resources: tmpdir=/var/folders/7r/39t1cgb13d57zk26c__2z50m0000gn/T
+[Sun Apr 19 15:18:51 2026]
+Finished jobid: 0 (Rule: consolidate_target)
+2 of 2 steps (100%) done
+Complete log(s): /Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.snakemake/log/2026-04-19T151845.965613.snakemake.log

@@ -1,0 +1,13 @@
+# on Sherlock, will need to change this config  file
+pathvars:
+  samples: "static/4_temp/samples"
+  intermed: "static/4_temp/test/smk/intermed"
+  shared: "static/4_temp/test/smk/shared"
+
+expansion: 1.1
+
+time_selection:
+  year: 2017
+  month: 7
+  days: [1, 2, 3]
+  hours: []

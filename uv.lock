@@ -1716,12 +1716,14 @@ source = { editable = "." }
 dependencies = [
     { name = "loguru" },
     { name = "plyze" },
+    { name = "snakemake" },
 ]
 
 [package.metadata]
 requires-dist = [
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "plyze", editable = "../../../plyze" },
+    { name = "snakemake", specifier = ">=9.19.0" },
 ]
 
 [[package]]

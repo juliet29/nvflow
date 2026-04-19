@@ -1,0 +1,58 @@
+Assuming unrestricted shared filesystem usage.
+host: DN525ffg.SUNet
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                   count
+------------------  -------
+consolidate               1
+consolidate_target        1
+total                     2
+
+Select jobs to execute...
+Execute 1 jobs...
+[Sun Apr 19 15:22:03 2026]
+localrule consolidate:
+    input: static/4_temp/test/smk/intermed/2000/metrics/out.json, static/4_temp/test/smk/intermed/1000/metrics/out.json
+    output: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    log: static/4_temp/test/smk/shared/flowmetrics/log.out
+    jobid: 1
+    reason: Updated input files: static/4_temp/test/smk/intermed/1000/metrics/out.json, static/4_temp/test/smk/intermed/2000/metrics/out.json
+    resources: tmpdir=/var/folders/7r/39t1cgb13d57zk26c__2z50m0000gn/T
+RuleException:
+CalledProcessError in file "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/workflow/rules/flow.smk", line 56:
+Command 'set -euo pipefail;  
+    uv run nvflow flowmetrics consolidate         --metrics-paths static/4_temp/test/smk/intermed/2000/metrics/out.json static/4_temp/test/smk/intermed/1000/metrics/out.json         --csv-path static/4_temp/test/smk/shared/flowmetrics/out.csv         2>static/4_temp/test/smk/shared/flowmetrics/log.out' returned non-zero exit status 1.
+[Sun Apr 19 15:22:05 2026]
+Error in rule consolidate:
+    message: None
+    jobid: 1
+    input: static/4_temp/test/smk/intermed/2000/metrics/out.json, static/4_temp/test/smk/intermed/1000/metrics/out.json
+    output: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    log: static/4_temp/test/smk/shared/flowmetrics/log.out (check log file(s) for error details)
+    shell:
+        
+    uv run nvflow flowmetrics consolidate         --metrics-paths static/4_temp/test/smk/intermed/2000/metrics/out.json static/4_temp/test/smk/intermed/1000/metrics/out.json         --csv-path static/4_temp/test/smk/shared/flowmetrics/out.csv         2>static/4_temp/test/smk/shared/flowmetrics/log.out
+    
+        (command exited with non-zero exit code)
+Removing output files of failed job consolidate since they might be corrupted:
+static/4_temp/test/smk/shared/flowmetrics/out.csv
+Shutting down, this might take some time.
+Exiting because a job execution failed. Look below for error messages
+[Sun Apr 19 15:22:05 2026]
+Error in rule consolidate:
+    message: None
+    jobid: 1
+    input: static/4_temp/test/smk/intermed/2000/metrics/out.json, static/4_temp/test/smk/intermed/1000/metrics/out.json
+    output: static/4_temp/test/smk/shared/flowmetrics/out.csv
+    log: static/4_temp/test/smk/shared/flowmetrics/log.out (check log file(s) for error details)
+    shell:
+        
+    uv run nvflow flowmetrics consolidate         --metrics-paths static/4_temp/test/smk/intermed/2000/metrics/out.json static/4_temp/test/smk/intermed/1000/metrics/out.json         --csv-path static/4_temp/test/smk/shared/flowmetrics/out.csv         2>static/4_temp/test/smk/shared/flowmetrics/log.out
+    
+        (command exited with non-zero exit code)
+Complete log(s): /Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.snakemake/log/2026-04-19T152203.247055.snakemake.log
+WorkflowError:
+At least one job did not complete successfully.

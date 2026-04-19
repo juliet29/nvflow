@@ -1,0 +1,20 @@
+Assuming unrestricted shared filesystem usage.
+host: DN525ffg.SUNet
+Building DAG of jobs...
+Using shell: /bin/bash
+Provided cores: 1 (use --cores to define parallelism)
+Rules claiming more threads will be scaled down.
+Job stats:
+job                     count
+--------------------  -------
+graphs_create               2
+graphs_create_target        1
+total                       3
+
+Select jobs to execute...
+Execute 1 jobs...
+RuleException in rule graphs_create in file "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/workflow/rules/flow.smk", line 4:
+AttributeError: 'Params' object has no attribute 'expansion', when formatting the following:
+
+        uv run nvflow create           --idf-path {input.idf}           --sql-path {input.sql}           --cardinal-expansion-factor {params.expansion}           --json-path {output.graphs}           --data-path {output.data}           2>{log}
+        

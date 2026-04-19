@@ -1,0 +1,3 @@
+SyntaxError in file "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/workflow/rules/flow.smk", line 37:
+invalid syntax. Perhaps you forgot a comma?:
+		"<intermed>/{sample}/metrics/out.json"
