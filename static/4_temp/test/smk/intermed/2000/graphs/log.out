@@ -1,0 +1,40 @@
+Traceback (most recent call last):
+  File "/home/users/jnwagwu/projects/nvflow/.venv/bin/nvflow", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/nvflow/src/nvflow/cli/make/main.py", line 40, in main
+    app()
+    ~~~^^
+  File "/nvflow/.venv/lib/python3.13/site-packages/cyclopts/core.py", line 1889, in __call__
+    result = _run_maybe_async_command(command, bound, resolved_backend)
+  File "/nvflow/.venv/lib/python3.13/site-packages/cyclopts/_run.py", line 50, in _run_maybe_async_command
+    return command(*bound.args, **bound.kwargs)
+  File "/nvflow/src/nvflow/cli/make/flowmetrics.py", line 29, in create
+    G = make_flow_graph(
+        CaseData(idf_path, sql_path),
+        cardinal_expansion_factor=cardinal_expansion_factor,
+        dt=datetimes,
+    )
+  File "/nvflow/.venv/lib/python3.13/site-packages/plyze/flow_graph/create/main.py", line 13, in make_flow_graph
+    case = EZ(case_data.idf)
+  File "<string>", line 8, in __init__
+  File "/nvflow/.venv/lib/python3.13/site-packages/plan2eplus/ezcase/ez.py", line 47, in __post_init__
+    self.idf = open_idf(self.idf_path)
+               ~~~~~~~~^^^^^^^^^^^^^^^
+  File "/nvflow/.venv/lib/python3.13/site-packages/plan2eplus/ezcase/utils.py", line 21, in open_idf
+    return IDF(idf_path)
+  File "/nvflow/.venv/lib/python3.13/site-packages/eppy/modeleditor.py", line 585, in __init__
+    self.read()
+    ~~~~~~~~~^^
+  File "/nvflow/.venv/lib/python3.13/site-packages/geomeppyupdated/patches.py", line 262, in read
+    ) = idfreader1(
+        ~~~~~~~~~~^
+        self.idfname, self.iddname, self, commdct=self.idd_info, block=self.block
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "/nvflow/.venv/lib/python3.13/site-packages/geomeppyupdated/patches.py", line 90, in idfreader1
+    versiontuple = iddversiontuple(iddfile)
+  File "/nvflow/.venv/lib/python3.13/site-packages/eppy/idfreader.py", line 41, in iddversiontuple
+    fhandle = open(afile, "rb")
+FileNotFoundError: [Errno 2] No such file or directory: '/Applications/EnergyPlus-22-2-0/Energy+.idd'
