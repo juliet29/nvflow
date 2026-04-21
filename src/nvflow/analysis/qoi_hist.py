@@ -2,19 +2,19 @@ from plyze.flow_graph.interfaces import ZoneNodeQOINames
 from datetime import datetime
 import polars as pl
 import altair as alt
-import patito as pt
 
 from nvflow.analysis.constants import Constants
 from nvflow.analysis.times import SampleTimes
 
 
-class RoomAtTime(pt.Model):
-    datetimes: pl.Datetime
-    case_name: str
-    space_names: str
-    mixing_volume: float
-    ventilation_volume: float
-    temperature: float
+# class RoomAtTime(pt.Model):
+#     datetimes: pl.Datetime
+#     case_name: str
+#     space_names: str
+#     mixing_volume: float
+#     ventilation_volume: float
+#     temperature: float
+#
 
 
 def collate_zone_data_dfs(case_names: list[str], dfs: list[pl.DataFrame]):
