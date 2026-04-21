@@ -1,0 +1,76 @@
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/kitchen_0/mix_vol.nc'),                               
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/kitchen_0/vent_vol.nc'),                                           
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/kitchen_0/temp.nc'))                                                   
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/balcony_5/mix_vol.nc'),                               
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/balcony_5/vent_vol.nc'),                                           
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/balcony_5/temp.nc'))                                                   
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_7/mix_vol.nc'),                               
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_7/vent_vol.nc'),                                           
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_7/temp.nc'))                                                   
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/storeroom_4/mix_vol.nc'),                             
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/storeroom_4/vent_vol.nc'),                                         
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/storeroom_4/temp.nc'))                                                 
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/shaft_6/mix_vol.nc'),                                 
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/shaft_6/vent_vol.nc'),                                             
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/shaft_6/temp.nc'))                                                     
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/living_dining_8/mix_vol.nc'),                         
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/living_dining_8/vent_vol.nc'),                                     
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/living_dining_8/temp.nc'))                                             
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_3/mix_vol.nc'),                               
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_3/vent_vol.nc'),                                           
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_3/temp.nc'))                                                   
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/corridor_2/mix_vol.nc'),                              
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/corridor_2/vent_vol.nc'),                                          
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/corridor_2/temp.nc'))                                                  
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ZoneDataPaths(mix_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/bathroom_1/mix_vol.nc'),                              
+         vent_vol=PosixPath('/nvflow/run/intermed/100403/graphs/data/bathroom_1/vent_vol.nc'),                                          
+         temp=PosixPath('/nvflow/run/intermed/100403/graphs/data/bathroom_1/temp.nc'))                                                  
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ExternalNodeDataPaths(external_wind_pressure=PosixPath('/nvflow/run/intermed/100403/graphs/data/EAST/external_wind_pressure.nc'
+         ))                                                                                                                             
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ExternalNodeDataPaths(external_wind_pressure=PosixPath('/nvflow/run/intermed/100403/graphs/data/NORTH/external_wind_pressure.nc
+         '))                                                                                                                            
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         ExternalNodeDataPaths(external_wind_pressure=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH/external_wind_pressure.nc
+         '))                                                                                                                            
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/EAST__kitchen_0/flow_in.nc'),                         
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/EAST__kitchen_0/flow_out.nc'))                                     
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/NORTH__bedroom_7/flow_in.nc'),                        
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/NORTH__bedroom_7/flow_out.nc'))                                    
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH__balcony_5/flow_in.nc'),                        
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH__balcony_5/flow_out.nc'))                                    
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH__living_dining_8/flow_in.nc'),                  
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH__living_dining_8/flow_out.nc'))                              
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH__bedroom_3/flow_in.nc'),                        
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/SOUTH__bedroom_3/flow_out.nc'))                                    
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/kitchen_0__living_dining_8/flow_in.nc'),              
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/kitchen_0__living_dining_8/flow_out.nc'))                          
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/balcony_5__living_dining_8/flow_in.nc'),              
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/balcony_5__living_dining_8/flow_out.nc'))                          
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_7__corridor_2/flow_in.nc'),                   
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_7__corridor_2/flow_out.nc'))                               
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/living_dining_8__corridor_2/flow_in.nc'),             
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/living_dining_8__corridor_2/flow_out.nc'))                         
+DEBUG    🐞:plyze.flow_graph.writer:make_paths2:69 | {} |                                                                               
+         EdgeDataPaths(flow_in=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_3__corridor_2/flow_in.nc'),                   
+         flow_out=PosixPath('/nvflow/run/intermed/100403/graphs/data/bedroom_3__corridor_2/flow_out.nc'))                               
+SUCCESS  ✅:nvflow.cli.make.flowmetrics:create:35 | {} | Finished writing graph                                                         
