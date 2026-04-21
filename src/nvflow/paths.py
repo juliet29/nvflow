@@ -19,7 +19,7 @@ class SampleResults:
 
     @classmethod
     def get_graph_jsons(cls):
-        return [i / "graphs/out.json" for i in cls.graphs_loc.iterdir()]
+        return [i / "out.json" for i in cls.graphs_loc.iterdir()]
 
 
 class FigureSaves:

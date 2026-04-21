@@ -12,7 +12,8 @@ rule graphs_create:
         year = config["time_selection"]["year"],
         month = config["time_selection"]["month"],
         days = config["time_selection"]["days"],
-        hours = config["time_selection"]["hours"]
+        hours = config["time_selection"]["hours"],
+        dataname = config["data_folder_name"]
     log:
       "<intermed>/{sample}/graphs/log.out"
     shell:
@@ -26,7 +27,7 @@ rule graphs_create:
           --ts.hours {params.hours} \
           --cardinal-expansion-factor {params.expansion} \
           --json-path {output.graphs} \
-          --data-path {output.data} \
+          --data-folder-name {params.dataname} \
           2>{log}
         """
 

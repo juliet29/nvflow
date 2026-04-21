@@ -10,3 +10,5 @@ time_selection:
   month: 7
   days: [1, 2, 3]
   hours: []
+
+data_folder_name: "data"

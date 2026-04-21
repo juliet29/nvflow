@@ -23,7 +23,7 @@ def create(
     ts: TimeSelection,
     cardinal_expansion_factor: float,
     json_path: Path,
-    data_path: Path,
+    data_folder_name: str,
 ):
     datetimes = ts.calc_datetimes()
     G = make_flow_graph(
@@ -31,7 +31,7 @@ def create(
         cardinal_expansion_factor=cardinal_expansion_factor,
         dt=datetimes,
     )
-    FlowGraphModel.write(G, json_path, data_path)
+    FlowGraphModel.write(G, json_path, data_folder_name)
     logger.success("Finished writing graph")
 
 

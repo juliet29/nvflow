@@ -1,16 +1,1 @@
-Traceback (most recent call last):
-  File "/home/users/jnwagwu/projects/nvflow/.venv/bin/nvflow", line 10, in <module>
-    sys.exit(main())
-             ~~~~^^
-  File "/nvflow/src/nvflow/cli/make/main.py", line 40, in main
-    app()
-    ~~~^^
-  File "/nvflow/.venv/lib/python3.13/site-packages/cyclopts/core.py", line 1889, in __call__
-    result = _run_maybe_async_command(command, bound, resolved_backend)
-  File "/nvflow/.venv/lib/python3.13/site-packages/cyclopts/_run.py", line 50, in _run_maybe_async_command
-    return command(*bound.args, **bound.kwargs)
-  File "/nvflow/src/nvflow/cli/make/flowmetrics.py", line 61, in consolidate
-    df = pl.from_dicts(all_metrics)
-  File "/nvflow/.venv/lib/python3.13/site-packages/polars/convert/general.py", line 217, in from_dicts
-    raise NoDataError(msg)
-polars.exceptions.NoDataError: no data, cannot infer schema
+SUCCESS  ✅:nvflow.cli.make.flowmetrics:consolidate:63 | {} | Finished consolidating JPG metrics      
