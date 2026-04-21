@@ -1,3 +1,0 @@
-NameError in file "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/workflow/rules/flow.smk", line 7:
-name 'make_eplus_inputs' is not defined
-  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/workflow/rules/flow.smk", line 7, in <module>

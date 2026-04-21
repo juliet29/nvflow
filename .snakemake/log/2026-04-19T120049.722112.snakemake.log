@@ -1,4 +1,0 @@
-SyntaxError in file "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/workflow/rules/flow.smk", line 9:
-invalid syntax. Perhaps you forgot a comma?:
-        uv run nvflow create \
-
