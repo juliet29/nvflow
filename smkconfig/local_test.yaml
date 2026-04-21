@@ -1,7 +1,7 @@
 pathvars:
   samples: "static/4_temp/eplus_samples"
-  intermed: "static/4_temp/test/smk/intermed"
-  shared: "static/4_temp/test/smk/shared"
+  intermed: "static/4_temp/local_test/smk/intermed"
+  shared: "static/4_temp/local_test/smk/shared"
 
 expansion: 1.1
 
