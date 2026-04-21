@@ -23,7 +23,7 @@ class SampleResults:
 
 
 class FigureSaves:
-    base = StaticPaths.figures
+    base = StaticPaths.figures / "working"
     design_metrics_corr_plot = base / "design_metrics_corr_plot"
 
 

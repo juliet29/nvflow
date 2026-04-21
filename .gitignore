@@ -16,3 +16,8 @@ wheels/
 
 # Snakemake
 **/.snakemake/**
+
+
+# Reulsts / Intermediate Steps
+static/4_temp/test
+static/5_figures/working/
