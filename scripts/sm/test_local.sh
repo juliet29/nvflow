@@ -1,5 +1,8 @@
 # !/bin/bash
-RESULTS_LOC="Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/static/4_temp/test"
+
+set -e # exit on failure
+
+RESULTS_LOC="Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/static/4_temp/local_test"
 
 rm -rf $RESULTS_LOC/*
 

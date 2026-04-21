@@ -11,6 +11,7 @@ from plyze.examples.casedata import example_casedata, example_times
 from plyze.metrics.interfaces import calc_metrics
 from plyze.plots.altair_helpers import AltairRenderers
 from plyze.plots.theme import default_theme
+from plyze.flow_graph.writer import GraphWriter
 
 app = App()
 
