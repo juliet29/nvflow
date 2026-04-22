@@ -1,10 +1,11 @@
+from loguru import logger
 from plyze.flow_graph.interfaces import ZoneNodeQOINames
 from datetime import datetime
 import polars as pl
 import altair as alt
 
 from nvflow.analysis.constants import Constants
-from nvflow.analysis.times import SampleTimes
+from nvflow.analysis.times import create_time_samples
 
 
 # class RoomAtTime(pt.Model):
@@ -43,11 +44,13 @@ def plot_hist(samples_df_at_time: pl.DataFrame, qoi: ZoneNodeQOINames):
 def plot_case_by_case_for_qoi(sample_df: pl.DataFrame, qoi: ZoneNodeQOINames):
     def p(dt: list[datetime], name: str):
         df2 = get_data_at_time(sample_df, dt)
+        logger.debug(df2)
         return plot_hist(df2, qoi).properties(title=name)
 
     chart = alt.VConcatChart()
-    for name, dt in SampleTimes().samples:
+    for name, dt in create_time_samples():
+
         c = p(dt, name)
-        chart |= c
+        chart &= c
 
     return chart

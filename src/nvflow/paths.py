@@ -14,17 +14,18 @@ class StaticPaths:
 
 class SampleResults:
     base = StaticPaths.temp / "results"
-    graphs_loc = base / "intermed"
+    intermed_loc = base / "intermed"
     metric_summary_csv = base / "shared/flowmetrics/out.csv"
 
     @classmethod
     def get_graph_jsons(cls):
-        return [i / "out.json" for i in cls.graphs_loc.iterdir()]
+        return [i / "graphs/out.json" for i in cls.intermed_loc.iterdir()]
 
 
 class FigureSaves:
-    base = StaticPaths.figures
-    design_metrics_corr_plot = base / "design_metrics_corr_plot"
+    base = StaticPaths.figures / "working"
+    design_metrics_histogram = base / "design_metrics_histogram"
+    qoi_histogram = base / "qoi_histogram"
 
 
 class ProjectPaths:

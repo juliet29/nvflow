@@ -9,6 +9,7 @@ authors = [
 requires-python = ">=3.13"
 dependencies = [
   "altair>=6.0.0",
+  "ipython>=9.12.0",
   "loguru>=0.7.3",
   "patito>=0.8.6",
   "plyze>=0.1.18",
@@ -21,7 +22,7 @@ requires = ["uv_build>=0.8.3,<0.9.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
-plyze = { git = "https://github.com/juliet29/plyze", tag = "s0.1.3" }
+plyze = { path = "../../../plyze", editable = true }
 
 [dependency-groups]
 dev = [
