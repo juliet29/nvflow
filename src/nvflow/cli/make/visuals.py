@@ -1,13 +1,13 @@
 from pathlib import Path
 from cyclopts import App
 from plyze.flow_graph.interfaces import ZoneNodeQOINames
+from plyze.qoi_flow_graph.zone_data import EnviroQOINames
 
 from nvflow.analysis.metrics_hist import plot_metrics_histogram
-from nvflow.analysis.qoi_hist import collate_zone_data_dfs, plot_case_by_case_for_qoi
+from nvflow.analysis.qoi_helpers import prep_basic_qois_df, prep_enviro_qois_df
+from nvflow.analysis.qoi_hist import plot_case_by_case_for_qoi
 from nvflow.figure_utils import AltairChart, save_altair_figures
 from nvflow.paths import ProjectPaths
-from plyze.qoi_flow_graph.zone_data import collate_zone_data_to_df
-from plyze import FlowGraphModel
 
 
 visuals = App(name="visuals")
@@ -31,15 +31,23 @@ def plot_metrics(save: bool = False, stop_render: bool = False):
 
 @visuals.command
 def plot_qoi(save: bool = False, stop_render: bool = False):
-    json_paths = ProjectPaths.sample_results.get_graph_jsons()
-    assert json_paths[0].exists(), f"Can't find {json_paths[0]}"
-    case_names = [i.parent.parent.name for i in json_paths]
-
-    graphs = [FlowGraphModel.read(i) for i in json_paths]
-    dfs = [collate_zone_data_to_df(i) for i in graphs]
-    sample_df = collate_zone_data_dfs(case_names, dfs)
+    sample_df = prep_basic_qois_df(ProjectPaths.sample_results.get_graph_jsons())
 
     qoi: ZoneNodeQOINames = "ventilation_volume"
+    c = plot_case_by_case_for_qoi(sample_df, qoi)
+
+    save_path = ProjectPaths.figures.qoi_histogram / qoi
+    handle_chart(c, save_path, save, stop_render)
+    # return sample_df
+
+
+@visuals.command
+def plot_qoi_env(save: bool = False, stop_render: bool = False):
+    sample_df = prep_enviro_qois_df(
+        ProjectPaths.sample_results.get_graph_jsons(), ProjectPaths.eplus.sql
+    )
+
+    qoi: EnviroQOINames = "temp_norm"
     c = plot_case_by_case_for_qoi(sample_df, qoi)
 
     save_path = ProjectPaths.figures.qoi_histogram / qoi

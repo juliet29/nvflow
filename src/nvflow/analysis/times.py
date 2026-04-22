@@ -11,6 +11,7 @@ days = (*month, [1, 2])
 def create_time_samples():
     lst = [
         ("Single Time - Noon", TimeSelection(*month, [1], [12])),
+        ("Single Day - All Times", TimeSelection(*month, [1], [])),
         ("Multiple Days - All Times", TimeSelection(*days, [])),
         ("Multiple Days, DayTime", TimeSelection(*days, list(range(6, 18)))),
     ]

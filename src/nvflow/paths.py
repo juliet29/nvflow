@@ -12,6 +12,12 @@ class StaticPaths:
     figures = base / "5_figures"
 
 
+class EplusSamples:
+    base = StaticPaths.temp / "eplus_samples/1000"
+    sql = base / "eplusout.sql"
+    idf = base / "out.idf"
+
+
 class SampleResults:
     base = StaticPaths.temp / "results"
     intermed_loc = base / "intermed"
@@ -31,3 +37,4 @@ class FigureSaves:
 class ProjectPaths:
     sample_results = SampleResults
     figures = FigureSaves
+    eplus = EplusSamples
