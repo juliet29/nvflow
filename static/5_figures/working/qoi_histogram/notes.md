@@ -53,4 +53,12 @@ Need to compute a flow in metric..
 
 For vent, the results are even more sparse.. but they are very differnt across the plans.. probably has to do with orientation. 
 
+# Temp Norm 
 
+See the same distinction as between the two kinds of rooms as before.. 
+
+
+day v nigh here is interesting because still have the distinction between the hot and not... 
+coloring this by room would be interesting...
+
+can harmonize across plans by using the room name only, not the full name

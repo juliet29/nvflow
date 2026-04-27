@@ -1,5 +1,10 @@
 from pathlib import Path 
 
+def get_sql_input(wildcards):
+    loc = Path(config["pathvars"]["samples"])
+    sql = loc / config["refsql"] / "eplusout.sql"
+    return sql
+
 def make_eplus_inputs(wildcards):
     loc = Path(config["pathvars"]["samples"])
     idf = loc / "{wildcards.sample}/out.idf".format(wildcards=wildcards),

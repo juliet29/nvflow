@@ -34,11 +34,11 @@ def plot_qoi(save: bool = False, stop_render: bool = False):
     sample_df = prep_basic_qois_df(ProjectPaths.sample_results.get_graph_jsons())
 
     qoi: ZoneNodeQOINames = "ventilation_volume"
-    c = plot_case_by_case_for_qoi(sample_df, qoi)
+    c = plot_case_by_case_for_qoi(sample_df, qoi, step=500)
 
     save_path = ProjectPaths.figures.qoi_histogram / qoi
     handle_chart(c, save_path, save, stop_render)
-    # return sample_df
+    return sample_df
 
 
 @visuals.command
@@ -48,7 +48,7 @@ def plot_qoi_env(save: bool = False, stop_render: bool = False):
     )
 
     qoi: EnviroQOINames = "temp_norm"
-    c = plot_case_by_case_for_qoi(sample_df, qoi)
+    c = plot_case_by_case_for_qoi(sample_df, qoi, step=0.2)
 
     save_path = ProjectPaths.figures.qoi_histogram / qoi
     handle_chart(c, save_path, save, stop_render)

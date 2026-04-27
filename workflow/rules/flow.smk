@@ -33,17 +33,18 @@ rule graphs_create:
 
 rule graph_metrics_create:
   input:
-    "<intermed>/{sample}/graphs/out.json"
+    graphs = "<intermed>/{sample}/graphs/out.json",
+    sql = get_sql_input
   output:
     "<intermed>/{sample}/metrics/out.json"
-  log:
-    "<intermed>/{sample}/graphs/log.out"
+  # log:
+  #   "<intermed>/{sample}/graphs/log.out"
   shell:
     """
     uv run nvflow flowmetrics create-metrics \
-        --json-path {input} \
-        --metrics-path {output} \
-        2>{log}
+        --json-path {input.graphs} \
+        --sql-path {input.sql} \
+        --metrics-path {output}
     """
 
 rule consolidate:

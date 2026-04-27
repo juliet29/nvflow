@@ -1,4 +1,5 @@
 from loguru import logger
+from plyze.qoi_flow_graph.zone_data import make_enviro
 import polars as pl
 from typing import Annotated, NamedTuple
 from pathlib import Path
@@ -36,9 +37,14 @@ def create(
 
 
 @flowmetrics.command()
-def create_metrics(json_path: Path, metrics_path: Path):
+def create_metrics(
+    json_path: Path,
+    sql_path: Path,
+    metrics_path: Path,
+):
     G = FlowGraphModel.read(json_path)
-    metrics = make_metrics(G)
+    enviro = make_enviro(sql_path)
+    metrics = make_metrics(G, enviro)
     metrics.write(metrics_path)
     logger.success("Finished writing metrics")
 
