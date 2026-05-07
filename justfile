@@ -14,3 +14,8 @@ push-tag end:
   @read status;
   git tag -a s0.1.{{end}} -m s0.1.{{end}}
   git push --tag
+
+# -------- SNAKEMAKE
+reset-test:
+  ls static/4_temp/local_test
+  rm -rfI static/4_temp/local_test

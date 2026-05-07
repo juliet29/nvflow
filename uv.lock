@@ -1787,24 +1787,16 @@ dependencies = [
     { name = "vl-convert-python" },
 ]
 
-[package.dev-dependencies]
-dev = [
-    { name = "plyze" },
-]
-
 [package.metadata]
 requires-dist = [
     { name = "altair", specifier = ">=6.0.0" },
     { name = "ipython", specifier = ">=9.12.0" },
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "patito", specifier = ">=0.8.6" },
-    { name = "plyze", editable = "../../../plyze" },
+    { name = "plyze", git = "https://github.com/juliet29/plyze?tag=s0.1.5" },
     { name = "snakemake", specifier = ">=9.19.0" },
     { name = "vl-convert-python", specifier = ">=1.9.0.post1" },
 ]
-
-[package.metadata.requires-dev]
-dev = [{ name = "plyze", editable = "../../../plyze" }]
 
 [[package]]
 name = "nvidia-cublas"
@@ -2192,7 +2184,7 @@ wheels = [
 [[package]]
 name = "plyze"
 version = "0.1.21"
-source = { editable = "../../../plyze" }
+source = { git = "https://github.com/juliet29/plyze?tag=s0.1.5#5e3d58d9e79d875a8fc65f7bbdc35022b273d3dd" }
 dependencies = [
     { name = "altair" },
     { name = "loguru" },
@@ -2205,21 +2197,6 @@ dependencies = [
     { name = "torch" },
     { name = "torch-geometric" },
     { name = "xarray" },
-]
-
-[package.metadata]
-requires-dist = [
-    { name = "altair", specifier = ">=6.0.0" },
-    { name = "loguru", specifier = ">=0.7.3" },
-    { name = "networkx", specifier = ">=3.6.1" },
-    { name = "plan2eplus", specifier = ">=0.1.5" },
-    { name = "pre-commit", specifier = ">=4.5.1" },
-    { name = "ptpython", specifier = ">=3.0.32" },
-    { name = "scikit-learn", specifier = ">=1.8.0" },
-    { name = "snakemake", specifier = ">=9.16.3" },
-    { name = "torch", specifier = ">=2.11.0" },
-    { name = "torch-geometric", specifier = ">=2.7.0" },
-    { name = "xarray", specifier = ">=2026.2.0" },
 ]
 
 [[package]]
