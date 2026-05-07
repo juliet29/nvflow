@@ -2,5 +2,5 @@
 include: "rules/common.smk"
 include: "rules/graphs.smk"
 include: "rules/metrics.smk"
-# include: "rules/qois.smk"
+include: "rules/qois.smk"
 # include: "rules/ambient.smk"
