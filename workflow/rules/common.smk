@@ -19,6 +19,14 @@ def get_eplus_samples(wildcards):
 
   return samples
 
+
+
+def get_graph_samples(wildcards): 
+  loc = Path(config["pathvars"]["graphs"])
+  samples = [i.name for i in loc.iterdir() if i.is_dir()]
+
+  return samples
+
 def get_metrics_samples(wildcards): 
   loc = Path(config["pathvars"]["intermed"])
   samples = [i.name for i in loc.iterdir() if i.is_dir() and (i/"metrics/out.json").exists()]

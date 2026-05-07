@@ -9,12 +9,13 @@ from plyze.plots.altair_helpers import AltairRenderers
 from plyze.plots.theme import default_theme
 from loguru import logger
 from nvflow.cli.make.flowmetrics import flowmetrics
-from nvflow.cli.make.visuals import visuals
+
+# from nvflow.cli.make.visuals import visuals
 
 
 app = App()
 app.command(flowmetrics)
-app.command(visuals)
+# app.command(visuals)
 
 
 def keep():

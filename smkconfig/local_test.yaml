@@ -1,7 +1,11 @@
 pathvars:
   samples: "static/4_temp/eplus_samples"
-  intermed: "static/4_temp/local_test/smk/intermed"
-  shared: "static/4_temp/local_test/smk/shared"
+  graphs: "static/4_temp/local_test/graphs"
+  metrics: "static/4_temp/local_test/metrics"
+  qois: "static/4_temp/local_test/qois"
+  cons_metrics: "static/4_temp/local_test/cons_metrics"
+  cons_qois: "static/4_temp/local_test/cons_qois"
+  cons_ambient: "static/4_temp/local_test/cons_ambient"
 
 expansion: 1.1
 
@@ -9,7 +13,7 @@ time_selection:
   year: 2017
   month: 7
   days: [1, 2, 3]
-  hours: []
+  hours: [0, 3, 6, 9, 12, 15, 18, 21]
 
 data_folder_name: "data"
 refsql: "1000"

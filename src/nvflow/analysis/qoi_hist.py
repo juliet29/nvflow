@@ -47,9 +47,7 @@ def plot_hist_binned(
         alt.Chart(samples_df_at_time)
         .mark_bar()
         .encode(
-            alt.X("binned_var", type="quantitative").title(
-                f"Binned {qoi} with step={step}"
-            ),
+            alt.X("binned_var", type="quantitative").title(f"{qoi}/S={step}"),
             y="count()",
             column=alt.Column(Constants.CASE),
         )
@@ -65,6 +63,26 @@ def plot_case_by_case_for_qoi(
     def p(dt: list[datetime], name: str):
         df2 = get_data_at_time(sample_df, dt).filter(pl.col(qoi) > 1)
         return plot_hist_binned(df2, qoi, step).properties(title=name)
+
+    chart = alt.VConcatChart()
+    for name, dt in create_time_samples():
+
+        logger.debug((name, dt))
+
+        c = p(dt, name)
+        chart &= c
+
+        # break
+
+    return chart
+
+
+def plot_case_by_case_for_qoi_env(
+    sample_df: pl.DataFrame, qoi: ZoneNodeQOINames, step: float
+):
+    def p(dt: list[datetime], name: str):
+        df2 = get_data_at_time(sample_df, dt).filter(pl.col(qoi) > 1)
+        return plot_hist(df2, qoi).properties(title=name)
 
     chart = alt.VConcatChart()
     for name, dt in create_time_samples():

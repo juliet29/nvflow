@@ -1,11 +1,14 @@
 from pathlib import Path
 from cyclopts import App
 from plyze.flow_graph.interfaces import ZoneNodeQOINames
-from plyze.qoi_flow_graph.zone_data import EnviroQOINames
+
+# from plyze.qoi_flow_graph.zone_data import EnviroQOINames
 
 from nvflow.analysis.metrics_hist import plot_metrics_histogram
-from nvflow.analysis.qoi_helpers import prep_basic_qois_df, prep_enviro_qois_df
-from nvflow.analysis.qoi_hist import plot_case_by_case_for_qoi
+from nvflow.analysis.qoi_helpers import prep_basic_qois_df
+from nvflow.analysis.qoi_hist import (
+    plot_case_by_case_for_qoi,
+)
 from nvflow.figure_utils import AltairChart, save_altair_figures
 from nvflow.paths import ProjectPaths
 
@@ -30,26 +33,41 @@ def plot_metrics(save: bool = False, stop_render: bool = False):
 
 
 @visuals.command
-def plot_qoi(save: bool = False, stop_render: bool = False):
+def plot_qoi(
+    qoi: ZoneNodeQOINames, save: bool = False, stop_render: bool = False, step=500
+):
     sample_df = prep_basic_qois_df(ProjectPaths.sample_results.get_graph_jsons())
 
-    qoi: ZoneNodeQOINames = "ventilation_volume"
-    c = plot_case_by_case_for_qoi(sample_df, qoi, step=500)
+    # qoi: ZoneNodeQOINames = "ventilation_volume"
+    c = plot_case_by_case_for_qoi(sample_df, qoi, step=step)
 
     save_path = ProjectPaths.figures.qoi_histogram / qoi
     handle_chart(c, save_path, save, stop_render)
     return sample_df
 
 
-@visuals.command
-def plot_qoi_env(save: bool = False, stop_render: bool = False):
-    sample_df = prep_enviro_qois_df(
-        ProjectPaths.sample_results.get_graph_jsons(), ProjectPaths.eplus.sql
-    )
-
-    qoi: EnviroQOINames = "temp_norm"
-    c = plot_case_by_case_for_qoi(sample_df, qoi, step=0.2)
-
-    save_path = ProjectPaths.figures.qoi_histogram / qoi
-    handle_chart(c, save_path, save, stop_render)
-    # return sample_df
+# @visuals.command
+# def plot_qoi_env(
+#     qoi: EnviroQOINames, save: bool = False, stop_render: bool = False, step=0.2
+# ):
+#     sample_df = prep_enviro_qois_df(
+#         ProjectPaths.sample_results.get_graph_jsons(), ProjectPaths.eplus.sql
+#     )
+#
+#     # qoi: EnviroQOINames = "temp_norm"
+#     c = plot_case_by_case_for_qoi(sample_df, qoi, step=step)
+#
+#     save_path = ProjectPaths.figures.qoi_histogram / qoi
+#     handle_chart(c, save_path, save, stop_render)
+#     # return sample_df
+#
+#
+# @visuals.command
+# def make_plots():
+#     # plot_qoi("mixing_volume", True, False)
+#     # plot_qoi("ventilation_volume", True, False)
+#     # plot_qoi("temperature", True, False, step=0.1)
+#     plot_qoi_env("mix_norm", True, False, step=0.02)
+#     plot_qoi_env("vent_norm", True, False, step=0.02)
+#     plot_qoi_env("temp_norm", True, False, step=0.1)
+#     plot_qoi_env("temp_norm_no_scale", True, False, 0.05)
