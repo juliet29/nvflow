@@ -12,9 +12,9 @@ dependencies = [
   "ipython>=9.12.0",
   "loguru>=0.7.3",
   "patito>=0.8.6",
-  "plyze==0.1.20",
   "snakemake>=9.19.0",
   "vl-convert-python>=1.9.0.post1",
+  "plyze",
 ]
 
 [build-system]
@@ -22,10 +22,8 @@ requires = ["uv_build>=0.8.3,<0.9.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
+# plyze = { git = "https://github.com/juliet29/plyze", tag = "s0.1.5" }
 plyze = { path = "../../../plyze", editable = true }
-
-[dependency-groups]
-dev = ["plyze"]
 
 
 [project.scripts]
