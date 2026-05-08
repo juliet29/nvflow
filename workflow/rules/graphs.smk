@@ -6,7 +6,8 @@ rule graphs_create:
         unpack(make_eplus_inputs)
     output:
         graphs = "<graphs>/{sample}/out.json",
-        data = directory("<graphs>/{sample}/data") 
+        data = directory("<graphs>/{sample}/data"),
+        done = "<graphs>/{sample}/.done"
     params:
         expansion = config["expansion"],
         year = config["time_selection"]["year"],
@@ -29,6 +30,7 @@ rule graphs_create:
           --json-path {output.graphs} \
           --data-folder-name {params.dataname} \
           2>{log}
+          touch {output.done}
         """
 
 
