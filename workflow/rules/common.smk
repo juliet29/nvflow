@@ -18,7 +18,13 @@ def get_eplus_samples(wildcards):
 
 def get_graph_samples(wildcards): 
   loc = Path(config["pathvars"]["graphs"])
-  # samples = [i.name for i in loc.iterdir() if i.is_dir()]
+  samples = [p.parent.name for p in loc.glob("*/.done")]
+
+  return samples
+
+
+def get_metric_samples(wildcards): 
+  loc = Path(config["pathvars"]["metrics"])
   samples = [p.parent.name for p in loc.glob("*/.done")]
 
   return samples

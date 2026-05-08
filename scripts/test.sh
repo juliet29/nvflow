@@ -5,8 +5,9 @@ SMKRUN="uv run snakemake \
 # --configfile=smkconfig/local_test.yaml"
 
 $SMKRUN graphs_create_target
-# wait
+wait
 #
 $SMKRUN ambient_create_target
+$SMKRUN metrics_create_target
 $SMKRUN metrics_consolidate_target
 $SMKRUN qois_consolidate_target

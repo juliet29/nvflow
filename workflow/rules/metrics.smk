@@ -4,23 +4,26 @@ rule metrics_create:
   input:
     graphs = "<graphs>/{sample}/out.json",
   output:
-    "<metrics>/{sample}/out.json"
+    metrics = "<metrics>/{sample}/out.json",
+    done = "<metrics>/{sample}/.done"
   log:
     "<metrics>/{sample}/log.out"
   shell:
     """
     uv run nvflow flowmetrics create-metrics \
         --json-path {input.graphs} \
-        --metrics-path {output} 
+        --metrics-path {output.metrics}
+    2>{log}
+    touch {output.done}
     """
 
 rule metrics_consolidate:
   input:
-      paths = expand("<metrics>/{sample}/out.json", sample=get_graph_samples)
+      paths = expand("<metrics>/{sample}/out.json", sample=get_metric_samples)
   output:
     "<cons_metrics>/out.csv"
   params:
-      names = expand("{sample}", sample=get_graph_samples)
+      names = expand("{sample}", sample=get_metric_samples)
   log:
     "<cons_metrics>/out.log"
   shell:
@@ -29,7 +32,7 @@ rule metrics_consolidate:
         --metrics-paths {input.paths} \
         --names {params.names} \
         --csv-path {output} \
-        2>{log}
+    2>{log}
     """
 
 # Targets ----------

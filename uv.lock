@@ -1793,7 +1793,7 @@ requires-dist = [
     { name = "ipython", specifier = ">=9.12.0" },
     { name = "loguru", specifier = ">=0.7.3" },
     { name = "patito", specifier = ">=0.8.6" },
-    { name = "plyze", git = "https://github.com/juliet29/plyze?tag=s0.1.5" },
+    { name = "plyze", git = "https://github.com/juliet29/plyze?tag=s0.1.6" },
     { name = "snakemake", specifier = ">=9.19.0" },
     { name = "vl-convert-python", specifier = ">=1.9.0.post1" },
 ]
@@ -2184,7 +2184,7 @@ wheels = [
 [[package]]
 name = "plyze"
 version = "0.1.21"
-source = { git = "https://github.com/juliet29/plyze?tag=s0.1.5#5e3d58d9e79d875a8fc65f7bbdc35022b273d3dd" }
+source = { git = "https://github.com/juliet29/plyze?tag=s0.1.6#109956475fc7d16b3b9e0ede68e92c453405011a" }
 dependencies = [
     { name = "altair" },
     { name = "loguru" },
