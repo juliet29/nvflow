@@ -39,5 +39,4 @@ rule metrics_create_target:
 
 rule metrics_consolidate_target:
   input: 
-    rules.graphs_create_target.input,
     "<cons_metrics>/out.csv"

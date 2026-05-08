@@ -39,5 +39,4 @@ rule qois_create_target:
 
 rule qois_consolidate_target:
   input: 
-    rules.graphs_create_target.input,
     "<cons_qois>/out.csv"
