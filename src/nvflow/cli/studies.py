@@ -1,17 +1,22 @@
+from cyclopts import App
+
+from nvflow.analysis_2.qoi_metrics import plot_df, prep_dfs
+from nvflow.constants import RoomNames
+from nvflow.paths import ProjectPaths
 import altair as alt
 from rich.pretty import pretty_repr
 from plyze.flow_graph.create.main import make_flow_graph
 
 import matplotlib.pyplot as plt
-from cyclopts import App
 from loguru import logger
 from utils4plans.logconfig import logset
 
 from plyze.examples.casedata import example_casedata, example_times
-from plyze.metrics.interfaces import calc_metrics
 from plyze.plots.altair_helpers import AltairRenderers
 from plyze.plots.theme import default_theme
-from plyze.flow_graph.writer import GraphWriter
+
+from nvflow.times import TimeSamples
+from plyze.metrics.registries import MetricRegistry
 
 app = App()
 
@@ -34,10 +39,15 @@ def keep():
 
 @app.command
 def fg():
-    G = make_flow_graph(example_casedata, 1.1, example_times)
-    # gst = create_st_graph(G, "NORTH", "WEST")  # TODO: test!
-    # print(pretty_repr(list(gst.edges)))
-    return calc_metrics(G)
+    qoi_path = ProjectPaths.sample_results.qois
+    metrics_path = ProjectPaths.sample_results.metrics
+
+    dt = TimeSamples().single_time_noon
+    room_name = RoomNames.kitchen
+
+    df = prep_dfs(qoi_path, metrics_path, dt, room_name)
+    chart = plot_df(df, MetricRegistry.flow.degree_dom_node.name, "zone_dimless_flow")
+    chart.show()
 
 
 ### ------- END COMMANDS ---------

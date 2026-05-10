@@ -20,12 +20,15 @@ class EplusSamples:
 
 class SampleResults:
     base = StaticPaths.temp / "results"
-    intermed_loc = base / "intermed"
-    metric_summary_csv = base / "shared/flowmetrics/out.csv"
+    graphs_loc = base / "graphs"
+    consolidated_data_loc = base / "cons"
+    metrics = consolidated_data_loc / "metrics.csv"
+    ambient = consolidated_data_loc / "ambient.csv"
+    qois = consolidated_data_loc / "qois.csv"
 
     @classmethod
     def get_graph_jsons(cls):
-        return [i / "graphs/out.json" for i in cls.intermed_loc.iterdir()]
+        return [i / "out.json" for i in cls.graphs_loc.iterdir()]
 
 
 class FigureSaves:

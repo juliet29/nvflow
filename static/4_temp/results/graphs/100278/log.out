@@ -1,0 +1,213 @@
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BALCONY_0` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BALCONY_0` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BALCONY_0` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BALCONY_0` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BALCONY_0` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BALCONY_0` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BALCONY_0` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BALCONY_0` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `KITCHEN_2` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `KITCHEN_2` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `KITCHEN_2` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `KITCHEN_2` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `KITCHEN_2` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `KITCHEN_2` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `KITCHEN_2` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `KITCHEN_2` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_5` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_5` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_5` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_5` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_5` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_5` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_5` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_5` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         112B                                                                   
+         array('BLOCK `STOREROOM_6` STOREY 0', dtype='<U28')                    
+         Coordinates:                                                           
+             space_names  <U28 112B 'BLOCK `STOREROOM_6` STOREY 0'              
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         112B                                                                   
+         array('BLOCK `STOREROOM_6` STOREY 0', dtype='<U28')                    
+         Coordinates:                                                           
+             space_names  <U28 112B 'BLOCK `STOREROOM_6` STOREY 0'              
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         112B                                                                   
+         array('BLOCK `STOREROOM_6` STOREY 0', dtype='<U28')                    
+         Coordinates:                                                           
+             space_names  <U28 112B 'BLOCK `STOREROOM_6` STOREY 0'              
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         112B                                                                   
+         array('BLOCK `STOREROOM_6` STOREY 0', dtype='<U28')                    
+         Coordinates:                                                           
+             space_names  <U28 112B 'BLOCK `STOREROOM_6` STOREY 0'              
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size: 96B
+         array('BLOCK `SHAFT_4` STOREY 0', dtype='<U24')                        
+         Coordinates:                                                           
+             space_names  <U24 96B 'BLOCK `SHAFT_4` STOREY 0'                   
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size: 96B
+         array('BLOCK `SHAFT_4` STOREY 0', dtype='<U24')                        
+         Coordinates:                                                           
+             space_names  <U24 96B 'BLOCK `SHAFT_4` STOREY 0'                   
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size: 96B
+         array('BLOCK `SHAFT_4` STOREY 0', dtype='<U24')                        
+         Coordinates:                                                           
+             space_names  <U24 96B 'BLOCK `SHAFT_4` STOREY 0'                   
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size: 96B
+         array('BLOCK `SHAFT_4` STOREY 0', dtype='<U24')                        
+         Coordinates:                                                           
+             space_names  <U24 96B 'BLOCK `SHAFT_4` STOREY 0'                   
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         128B                                                                   
+         array('BLOCK `LIVING_DINING_3` STOREY 0', dtype='<U32')                
+         Coordinates:                                                           
+             space_names  <U32 128B 'BLOCK `LIVING_DINING_3` STOREY 0'          
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         128B                                                                   
+         array('BLOCK `LIVING_DINING_3` STOREY 0', dtype='<U32')                
+         Coordinates:                                                           
+             space_names  <U32 128B 'BLOCK `LIVING_DINING_3` STOREY 0'          
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         128B                                                                   
+         array('BLOCK `LIVING_DINING_3` STOREY 0', dtype='<U32')                
+         Coordinates:                                                           
+             space_names  <U32 128B 'BLOCK `LIVING_DINING_3` STOREY 0'          
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         128B                                                                   
+         array('BLOCK `LIVING_DINING_3` STOREY 0', dtype='<U32')                
+         Coordinates:                                                           
+             space_names  <U32 128B 'BLOCK `LIVING_DINING_3` STOREY 0'          
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_7` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_7` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_7` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_7` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_7` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_7` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         104B                                                                   
+         array('BLOCK `BEDROOM_7` STOREY 0', dtype='<U26')                      
+         Coordinates:                                                           
+             space_names  <U26 104B 'BLOCK `BEDROOM_7` STOREY 0'                
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `CORRIDOR_1` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `CORRIDOR_1` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `CORRIDOR_1` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `CORRIDOR_1` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `CORRIDOR_1` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `CORRIDOR_1` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `CORRIDOR_1` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `CORRIDOR_1` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `BATHROOM_8` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `BATHROOM_8` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `BATHROOM_8` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `BATHROOM_8` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `BATHROOM_8` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `BATHROOM_8` STOREY 0'               
+DEBUG    🐞:plyze.qoi_flow_graph.graph_qoi_interfaces:register:103 | {} |       
+         Updated xarray space name <xarray.DataArray 'space_names' ()> Size:    
+         108B                                                                   
+         array('BLOCK `BATHROOM_8` STOREY 0', dtype='<U27')                     
+         Coordinates:                                                           
+             space_names  <U27 108B 'BLOCK `BATHROOM_8` STOREY 0'               
+SUCCESS  ✅:nvflow.cli.make.flowmetrics:create:44 | {} | Finished writing graph 
