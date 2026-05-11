@@ -19,6 +19,7 @@ class RoomNames(StrEnum):
     room = "ROOM"
 
 
-class WindDirections:
-    _0_10 = (0, 10)
-    _320_330 = (320, 330)
+class AmbientDataNames(StrEnum):
+    # TODO: add to plyze
+    wind_direction = "wind_direction"
+    wind_group = "wind_group"

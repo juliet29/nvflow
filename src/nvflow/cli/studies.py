@@ -1,7 +1,12 @@
 from cyclopts import App
+import polars as pl
 
-from nvflow.analysis_2.qoi_metrics import plot_df, prep_dfs
-from nvflow.constants import RoomNames
+from nvflow.analysis_2.helpers import (
+    read_csv_and_update_time_type,
+    segment_wind_directions,
+)
+from nvflow.analysis_2.qoi_metrics import plot_dimless_corr, prep_dfs
+from nvflow.constants import AmbientDataNames, Constants, RoomNames
 from nvflow.paths import ProjectPaths
 import altair as alt
 from rich.pretty import pretty_repr
@@ -16,7 +21,6 @@ from plyze.plots.altair_helpers import AltairRenderers
 from plyze.plots.theme import default_theme
 
 from nvflow.times import TimeSamples
-from plyze.metrics.registries import MetricRegistry
 
 app = App()
 
@@ -38,15 +42,33 @@ def keep():
 
 
 @app.command
+def amb():
+    ambient_path = ProjectPaths.sample_results.ambient
+    df = read_csv_and_update_time_type(ambient_path)
+    df = segment_wind_directions(df)
+    return df.select(pl.col(AmbientDataNames.wind_group).value_counts())
+
+
+@app.command
 def fg():
     qoi_path = ProjectPaths.sample_results.qois
     metrics_path = ProjectPaths.sample_results.metrics
+    ambient_path = ProjectPaths.sample_results.ambient
 
     dt = TimeSamples().single_time_noon
-    room_name = RoomNames.kitchen
+    room_name = RoomNames.room
+    wind_group_start = 320
+    # return prep_qoi_and_ambient(qoi_path, ambient_path, 320).select(
+    #     pl.col(AmbientDataNames.wind_group)
+    # )
 
-    df = prep_dfs(qoi_path, metrics_path, dt, room_name)
-    chart = plot_df(df, MetricRegistry.flow.degree_dom_node.name, "zone_dimless_flow")
+    df = (
+        prep_dfs(qoi_path, ambient_path, metrics_path, wind_group_start, room_name)
+        .group_by(Constants.CASE)
+        .agg(pl.col(pl.Float64).median())
+    )
+    # return df
+    chart = plot_dimless_corr(df)
     chart.show()
 
 
