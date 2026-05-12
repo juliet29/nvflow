@@ -8,10 +8,8 @@ from plyze.flow_graph.interfaces import ZoneNodeQOINames
 import polars as pl
 
 from nvflow.analysis_2.helpers import (
-    HandleWindDir,
     filter_rooms,
     read_csv_and_update_time_type,
-    segment_wind_directions,
 )
 
 
@@ -26,16 +24,26 @@ def prep_qoi_and_ambient(
 
     qoi_df = read_csv_and_update_time_type(qoi_path)
     ambient_df = (
-        read_csv_and_update_time_type(ambient_path)
-        .pipe(segment_wind_directions)
-        .drop(Constants.SPACE)
+        read_csv_and_update_time_type(ambient_path).drop(Constants.SPACE)
+        # .pipe(segment_wind_directions)
+    )
+    logger.debug(
+        ambient_df.select(pl.col(AmbientDataNames.wind_direction).value_counts())
     )
 
-    join_df = ambient_df.join(qoi_df, on=Constants.DATETIME).filter(
-        pl.col(AmbientDataNames.wind_group)
-        == HandleWindDir.make_wind_group(wind_group_start)
-    )
-    logger.debug(join_df.select(pl.col(Constants.SPACE).value_counts()))
+    # join_df = ambient_df.join(qoi_df, on=Constants.DATETIME).filter(
+    #     pl.col(AmbientDataNames.wind_group)
+    #     == HandleWindDir.make_wind_group(wind_group_start)
+    # )
+    #
+    join_df = ambient_df.join(qoi_df, on=Constants.DATETIME)
+
+    logger.debug(join_df.select(pl.col(AmbientDataNames.wind_direction).value_counts()))
+    # .filter(
+    #     pl.col(AmbientDataNames.wind_group)
+    #     == HandleWindDir.make_wind_group(wind_group_start)
+    # )
+    # logger.debug(join_df.select(pl.col(Constants.SPACE).value_counts()))
 
     return join_df
 
@@ -56,7 +64,9 @@ def prep_dfs(
     metrics_df = pl.read_csv(metrics_path)
 
     # join on case..
-    join_df = metrics_df.join(qoi_ambient, on="case_name")
+    join_df = metrics_df.join(qoi_ambient, on=Constants.CASE)
+
+    logger.debug(join_df.select(pl.col(AmbientDataNames.wind_direction).value_counts()))
     return join_df
 
 
@@ -65,7 +75,25 @@ def plot_df(df: pl.DataFrame, metric: str, qoi: ZoneNodeQOINames):
     return (
         alt.Chart(df)
         .mark_point()
-        .encode(x=alt.X(metric), y=alt.Y(qoi), color=alt.Color(Constants.CASE))
+        .encode(
+            x=alt.X(metric).scale(zero=False),
+            y=alt.Y(qoi).scale(zero=False),
+            color=alt.Color(Constants.CASE),
+        )
+        .properties(width=400, height=400)
+    )
+
+
+def plot_wind_dir_corr(df: pl.DataFrame, qoi: ZoneNodeQOINames):
+    return (
+        alt.Chart(df)
+        .mark_point()
+        .encode(
+            x=alt.X(AmbientDataNames.wind_direction).scale(zero=False),
+            y=alt.Y(qoi).scale(zero=False),
+            color=alt.Color(Constants.CASE),
+        )
+        .properties(width=400, height=400)
     )
 
 
