@@ -1,6 +1,6 @@
+# from running `wind_dir_vars.sh`
 time_selection:
   year: 2017
-  # from running `wind_dir_vars.sh`
   month: [7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 8, 8, 8, 8, 8, 8]
   days:
     [1, 1, 1, 2, 2, 3, 4, 5, 6, 13, 14, 14, 15, 16, 22, 25, 3, 5, 5, 5, 5, 14]

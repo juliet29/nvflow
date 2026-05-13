@@ -22,7 +22,7 @@ requires = ["uv_build>=0.8.3,<0.9.0"]
 build-backend = "uv_build"
 
 [tool.uv.sources]
-plyze = { git = "https://github.com/juliet29/plyze", tag = "s0.1.9" }
+plyze = { git = "https://github.com/juliet29/plyze", tag = "s0.1.10" }
 # plyze = { path = "../../../plyze", editable = true }
 
 
