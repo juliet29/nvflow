@@ -14,6 +14,7 @@ rule graphs_create:
         month = config["time_selection"]["month"],
         days = config["time_selection"]["days"],
         hours = config["time_selection"]["hours"],
+        listwise = "--ts.listwise" if config["time_selection"]["listwise"] else "--ts.no-listwise",
         dataname = config["data_folder_name"]
     log:
       "<graphs>/{sample}/log.out"
@@ -26,6 +27,7 @@ rule graphs_create:
           --ts.month {params.month} \
           --ts.days {params.days} \
           --ts.hours {params.hours} \
+          {params.listwise} \
           --cardinal-expansion-factor {params.expansion} \
           --json-path {output.graphs} \
           --data-folder-name {params.dataname} \

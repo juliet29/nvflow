@@ -13,6 +13,7 @@ rule ambient_create:
       month = config["time_selection"]["month"],
       days = config["time_selection"]["days"],
       hours = config["time_selection"]["hours"],
+      listwise = "--ts.listwise" if config["time_selection"]["listwise"] else "--ts.no-listwise",
   shell:
     """
     uv run nvflow flowmetrics create-ambient-qois\
@@ -22,6 +23,7 @@ rule ambient_create:
         --ts.month {params.month} \
         --ts.days {params.days} \
         --ts.hours {params.hours} \
+        {params.listwise} \
     """
 
 rule ambient_create_target:

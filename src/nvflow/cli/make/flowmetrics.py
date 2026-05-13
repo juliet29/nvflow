@@ -14,7 +14,7 @@ from plyze import (
     MetricHolder,
 )
 
-from nvflow.analysis.constants import Constants
+from nvflow.constants import Constants
 
 
 flowmetrics = App(name="flowmetrics")
