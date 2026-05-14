@@ -8,7 +8,8 @@ cols_to_yaml() {
   done
 }
 
-xan filter 'month > 6 and month < 9' palo_alto_20.csv |
+# tee wind_dirs.csv |
+xan filter 'month >= 6 and month <=7' palo_alto_20.csv |
   xan select "month,day,wind_direction,hour,minute" |
   xan groupby wind_direction 'first(month), first(day), first(hour), first(minute)' |
   xan drop "wind_direction" |

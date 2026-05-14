@@ -4,7 +4,7 @@
 LOCAL_OAK="/oak/stanford/groups/risheej"
 # TODO potentially ask for the time..
 LOGIN="jnwagwu@login.sherlock.stanford.edu"
-LATEST="$LOCAL_OAK/jnwagwu/nvflow/$1"
+LATEST="$LOCAL_OAK/jnwagwu/nvflow/$1" # copy the latest results
 
 DEST="/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/static/4_temp/results"
 

@@ -1,5 +1,5 @@
 pathvars:
-  samples: "static/4_temp/eplus_samples"
+  samples: "static/4_temp/more_eplus_samples"
   graphs: "static/4_temp/local_test/graphs"
   metrics: "static/4_temp/local_test/metrics"
   qois: "static/4_temp/local_test/qois"

@@ -4,11 +4,12 @@ from utils4plans.lists import chain_flatten
 # single time
 YEAR = 2017
 MONTH = 7
-month = (YEAR, MONTH)
+month = (YEAR, [MONTH])
 days = (*month, [1, 2])
 
 
 def create_time_samples():
+
     lst = [
         ("Single Time - Noon", TimeSelection(*month, [1], [12])),
         ("Single Day - All Times", TimeSelection(*month, [1], [])),

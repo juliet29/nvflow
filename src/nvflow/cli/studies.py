@@ -1,5 +1,10 @@
 from cyclopts import App
+import yaml
+from plyze.qoi.data.data import convert_xarray_to_polars
 import polars as pl
+
+from plyze.qoi.data.interfaces import QOIandData
+from plyze.qoi.registries.main import QOIRegistry
 
 from nvflow.analysis_2.helpers import (
     read_csv_and_update_time_type,
@@ -43,6 +48,55 @@ def keep():
 
 
 ### ------- START COMMANDS ---------
+
+
+@app.command
+def times():
+    sql_path = ProjectPaths.more_eplus.sql
+    wind_dirs = QOIandData(QOIRegistry.site.wind_direction, sql_path).original_arr
+    df = (
+        convert_xarray_to_polars(wind_dirs, "wind_direction")
+        .sort(by="wind_direction")
+        .with_columns(
+            pl.col("wind_direction")
+            .cut([10 * i for i in range(1, 37)], include_breaks=True)
+            .alias("cut")
+        )
+        .unnest("cut")
+        .group_by("breakpoint")
+        .agg(
+            [
+                pl.col(Constants.DATETIME).first(),
+                pl.col("category").first(),
+                pl.col("wind_direction").first(),
+            ]
+        )
+        .sort(by="breakpoint")
+    )
+
+    logger.info(
+        f"first wind direction in 10º bins: {df.get_column("wind_direction").to_list()}"
+    )
+
+    datedf = (
+        df.select(
+            year=pl.col(Constants.DATETIME).dt.year(),
+            month=pl.col(Constants.DATETIME).dt.month(),
+            date=pl.col(Constants.DATETIME).dt.day(),
+            hour=pl.col(Constants.DATETIME).dt.hour(),
+        )
+        .sort(by=["year", "month", "date", "hour"])
+        .to_dict()
+    )
+    date_dict = {k: v.to_list() for k, v in datedf.items()}
+    date_dict["year"] = date_dict["year"][0]
+    date_dict["listwise"] = True  # pyright: ignore[reportArgumentType]
+
+    dump_dict = {}
+    dump_dict["time_selection"] = date_dict
+    with open(ProjectPaths.config.wind_time_sel, "w") as yamlfile:
+        data = yaml.dump(dump_dict, yamlfile)
+    return date_dict
 
 
 @app.command

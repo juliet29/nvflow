@@ -5,6 +5,11 @@ import pyprojroot
 BASE_PATH = pyprojroot.find_root(pyprojroot.has_dir(".git"))
 
 
+class ConfigPaths:
+    smkconfig = Path(BASE_PATH) / "smkconfig"
+    wind_time_sel = smkconfig / "wind_time_sel.yaml"
+
+
 class StaticPaths:
     base = Path(BASE_PATH) / "static"
     inputs = base / "1_inputs"
@@ -14,6 +19,12 @@ class StaticPaths:
 
 class EplusSamples:
     base = StaticPaths.temp / "eplus_samples/1000"
+    sql = base / "eplusout.sql"
+    idf = base / "out.idf"
+
+
+class MoreEplusSamples:
+    base = StaticPaths.temp / "more_eplus_samples/100397"
     sql = base / "eplusout.sql"
     idf = base / "out.idf"
 
@@ -41,3 +52,5 @@ class ProjectPaths:
     sample_results = SampleResults
     figures = FigureSaves
     eplus = EplusSamples
+    more_eplus = MoreEplusSamples
+    config = ConfigPaths
