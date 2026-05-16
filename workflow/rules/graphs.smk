@@ -1,5 +1,5 @@
 
-configfile: "smkconfig/local_test.yaml"
+configfile: "smkconfig/more_test.yaml"
 
 rule graphs_create:
     input:

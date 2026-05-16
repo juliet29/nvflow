@@ -1,6 +1,7 @@
 from loguru import logger
 from plyze.flow_graph.create.main import make_ambient_data
 from plyze.qoi_flow_graph.zone_data import collate_ambient_data, collate_zone_data_to_df
+from plyze.qoi_flow_graph.calculators.plan import make_plan_qois
 import polars as pl
 from typing import Annotated, NamedTuple
 from pathlib import Path
@@ -104,3 +105,31 @@ def consolidate_qois(
 
     df.write_csv(csv_path)
     logger.success("Finished consolidating qois")
+
+
+@flowmetrics.command()
+def create_plan_qois_for_case(
+    json_path: Path,
+    qoi_path: Path,
+):
+
+    G = FlowGraphModel.read(json_path)
+    holder = make_plan_qois(G)
+    holder.write(qoi_path)
+    logger.success("Finished writing qois")
+
+
+# @flowmetrics.command()
+# def consolidate_plan_qois(
+#     qoi_paths: Annotated[list[Path], Parameter(consume_multiple=True)],
+#     names: Annotated[list[str], Parameter(consume_multiple=True)],
+#     csv_path: Path,
+# ):
+#     def update_df(qoi_path: Path, name: str):
+#         return pl.read_csv(qoi_path).with_columns(pl.lit(name).alias(Constants.CASE))
+#
+#     dfs = [update_df(qoi_path, name) for qoi_path, name in zip(qoi_paths, names)]
+#     df = pl.concat(dfs)
+#
+#     df.write_csv(csv_path)
+#     logger.success("Finished consolidating qois")

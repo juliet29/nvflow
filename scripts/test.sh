@@ -1,10 +1,12 @@
 #!/bin/bash
 
-set -e
+# set -e
 
 SMKRUN="uv run snakemake \
   --cores 1 \
-  --configfile=smkconfig/wind_dir_time_select.yaml"
+  --keep-going \
+  --configfile=smkconfig/more_test.yaml \
+  --configfile=smkconfig/wind_time_sel.yaml"
 
 $SMKRUN graphs_create_target
 wait

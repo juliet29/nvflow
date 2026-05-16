@@ -1,4 +1,4 @@
-configfile: "smkconfig/local_test.yaml"
+configfile: "smkconfig/more_test.yaml"
 
 rule ambient_create:
   input:

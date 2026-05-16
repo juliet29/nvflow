@@ -15,7 +15,17 @@ push-tag end:
   git tag -a s0.1.{{end}} -m s0.1.{{end}}
   git push --tag
 
-# -------- SNAKEMAKE
+# -------- FOR SNAKEMAKE
 reset-test:
   ls static/4_temp/local_test
   rm -rfI static/4_temp/local_test
+
+
+reset-local_results:
+  ls static/4_temp/local_results
+  rm -rfI static/4_temp/local_results
+
+# -------- TEST CLI
+
+generate-time-wind-yaml:
+  uv run nvflow setup gen-time-sel-yaml-for-wind-dir --sql_path "static/4_temp/more_eplus_samples/100270/eplusout.sql" --yaml-path "test.yaml"

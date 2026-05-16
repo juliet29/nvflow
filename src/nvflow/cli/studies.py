@@ -82,10 +82,10 @@ def times():
         df.select(
             year=pl.col(Constants.DATETIME).dt.year(),
             month=pl.col(Constants.DATETIME).dt.month(),
-            date=pl.col(Constants.DATETIME).dt.day(),
-            hour=pl.col(Constants.DATETIME).dt.hour(),
+            days=pl.col(Constants.DATETIME).dt.day(),
+            hours=pl.col(Constants.DATETIME).dt.hour(),
         )
-        .sort(by=["year", "month", "date", "hour"])
+        .sort(by=["year", "month", "days", "hours"])
         .to_dict()
     )
     date_dict = {k: v.to_list() for k, v in datedf.items()}

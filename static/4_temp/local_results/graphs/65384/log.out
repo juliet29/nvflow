@@ -1,0 +1,37 @@
+Traceback (most recent call last):
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.venv/bin/nvflow", line 10, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/src/nvflow/cli/make/main.py", line 46, in main
+    app()
+    ~~~^^
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.venv/lib/python3.13/site-packages/cyclopts/core.py", line 1920, in __call__
+    result = _run_maybe_async_command(command, bound, resolved_backend)
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.venv/lib/python3.13/site-packages/cyclopts/_run.py", line 50, in _run_maybe_async_command
+    return command(*bound.args, **bound.kwargs)
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/src/nvflow/cli/make/flowmetrics.py", line 38, in create
+    G = make_flow_graph(
+        CaseData(idf_path, sql_path),
+        cardinal_expansion_factor=cardinal_expansion_factor,
+        dt=datetimes,
+    )
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/plyze/src/plyze/flow_graph/create/main.py", line 55, in make_flow_graph
+    external_nodes = make_external_nodes(
+        case, case_data.sql, cardinal_expansion_factor, dt
+    )
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/plyze/src/plyze/flow_graph/create/external_node.py", line 62, in make_external_nodes
+    ).original_arr
+      ^^^^^^^^^^^^
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/plyze/src/plyze/qoi/data/interfaces.py", line 34, in original_arr
+    return self.qoi.fx(self.sql_path)
+           ~~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/plyze/src/plyze/qoi/registries/custom.py", line 13, in get_wind_pressure_unique_external_nodes
+    wind_pressure = get_qoi("AFN Node Wind Pressure", sql_path).data_arr
+                    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.venv/lib/python3.13/site-packages/plan2eplus/results/sql.py", line 45, in get_qoi
+    return create_result_for_qoi(sql, qoi)
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.venv/lib/python3.13/site-packages/plan2eplus/results/sql.py", line 38, in create_result_for_qoi
+    raise Exception(
+        f"Invalid variable request: {var} not in {sql.available_outputs} in {sql}"
+    )
+Exception: Invalid variable request: AFN Node Wind Pressure not in ('Site Wind Speed', 'Site Outdoor Air Drybulb Temperature', 'Zone Mean Air Temperature', 'Site Outdoor Air Barometric Pressure', 'Site Wind Direction') in Energy SQLiteResult: static/4_temp/more_eplus_samples/65384/eplusout.sql

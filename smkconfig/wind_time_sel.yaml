@@ -1,5 +1,5 @@
 time_selection:
-  date:
+  days:
   - 1
   - 1
   - 1
@@ -27,7 +27,7 @@ time_selection:
   - 22
   - 22
   - 22
-  hour:
+  hours:
   - 0
   - 8
   - 12
