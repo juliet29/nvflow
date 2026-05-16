@@ -1,4 +1,4 @@
-configfile: "smkconfig/test.yaml"
+configfile: "smkconfig/more_test.yaml"
 
 rule qois_create:
   input:

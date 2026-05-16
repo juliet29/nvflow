@@ -9,7 +9,7 @@ Traceback (most recent call last):
     result = _run_maybe_async_command(command, bound, resolved_backend)
   File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/.venv/lib/python3.13/site-packages/cyclopts/_run.py", line 50, in _run_maybe_async_command
     return command(*bound.args, **bound.kwargs)
-  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/src/nvflow/cli/make/flowmetrics.py", line 38, in create
+  File "/Users/julietnwagwuume-ezeoke/_UILCode/gqe-phd/fpopt/studies2/sherdirs/nvflow/src/nvflow/cli/make/flowmetrics.py", line 39, in create
     G = make_flow_graph(
         CaseData(idf_path, sql_path),
         cardinal_expansion_factor=cardinal_expansion_factor,
@@ -34,4 +34,4 @@ Traceback (most recent call last):
     raise Exception(
         f"Invalid variable request: {var} not in {sql.available_outputs} in {sql}"
     )
-Exception: Invalid variable request: AFN Node Wind Pressure not in ('Site Wind Speed', 'Site Outdoor Air Drybulb Temperature', 'Zone Mean Air Temperature', 'Site Outdoor Air Barometric Pressure', 'Site Wind Direction') in Energy SQLiteResult: static/4_temp/more_eplus_samples/65384/eplusout.sql
+Exception: Invalid variable request: AFN Node Wind Pressure not in ('Site Wind Speed', 'Site Outdoor Air Barometric Pressure', 'Zone Mean Air Temperature', 'Site Outdoor Air Drybulb Temperature', 'Site Wind Direction') in Energy SQLiteResult: static/4_temp/more_eplus_samples/65384/eplusout.sql

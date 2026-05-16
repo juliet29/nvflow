@@ -3,6 +3,7 @@ pathvars:
   graphs: "static/4_temp/local_results/graphs"
   metrics: "static/4_temp/local_results/metrics"
   qois: "static/4_temp/local_results/qois"
+  plan_qois: "static/4_temp/local_results/plan_qois"
   cons_metrics: "static/4_temp/local_results/cons_metrics"
   cons_qois: "static/4_temp/local_results/cons_qois"
   cons_ambient: "static/4_temp/local_results/cons_ambient"

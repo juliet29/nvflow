@@ -1,4 +1,4 @@
-configfile: "smkconfig/test.yaml"
+configfile: "smkconfig/more_test.yaml"
 
 rule metrics_create:
   input:

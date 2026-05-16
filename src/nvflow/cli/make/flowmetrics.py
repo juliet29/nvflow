@@ -108,7 +108,7 @@ def consolidate_qois(
 
 
 @flowmetrics.command()
-def create_plan_qois_for_case(
+def create_plan_qois(
     json_path: Path,
     qoi_path: Path,
 ):
